@@ -1,5 +1,4 @@
 # Build outputs
-des
 build/
 *.o
 *.out
@@ -9,3 +8,6 @@ build/
 .idea/
 *.swp
 .DS_Store
+
+# Logs
+!logs/
