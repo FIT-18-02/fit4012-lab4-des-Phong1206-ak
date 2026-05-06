@@ -65,6 +65,7 @@ cmake --build build
 
 - Số lượng block: Chương trình hỗ trợ nhập chuỗi có độ dài bất kỳ (multi-block).
 
+
 ## 4. Output / Đầu ra
 
 - Kết quả cuối cùng: Một chuỗi nhị phân dài duy nhất đại diện cho kết quả mã hóa hoặc giải mã.
@@ -85,23 +86,24 @@ Chương trình sử dụng cơ chế Zero Padding:
 
 ## 6. Tests bắt buộc
 
-Repo này đã tạo sẵn **5 tên file test mẫu** để sinh viên điền nội dung:
+- test_des_sample.sh: Kiểm tra với vector thử chuẩn.
 
-- `tests/test_des_sample.sh`
-- `tests/test_encrypt_decrypt_roundtrip.sh`
-- `tests/test_multiblock_padding.sh`
-- `tests/test_tamper_negative.sh`
-- `tests/test_wrong_key_negative.sh`
+- test_encrypt_decrypt_roundtrip.sh: Kiểm tra khả năng mã hóa rồi giải mã ngược lại.
 
-Sinh viên phải tự hoàn thiện test và bổ sung minh chứng chạy.
+- test_multiblock_padding.sh: Kiểm tra dữ liệu dài và cơ chế bù bit 0.
+
+- test_tamper_negative.sh: Kiểm tra khi ciphertext bị thay đổi.
+
+- test_wrong_key_negative.sh: Kiểm tra khi dùng sai khóa để giải mã.
+
 
 ## 7. Logs / Minh chứng
 
-Thư mục `logs/` dùng để nộp minh chứng, ví dụ:
-- ảnh chụp màn hình khi chạy chương trình
-- output của test
-- log thử đúng / sai key / tamper
-- log cho mã hóa nhiều block
+Các tệp trong thư mục logs/ chứa:
+
+- run_log.txt: Nhật ký chạy thử chương trình với các bộ dữ liệu khác nhau.
+
+- Ảnh chụp màn hình kết quả chạy trên terminal thành công.
 
 ## 8. Ethics & Safe use
 
@@ -121,7 +123,7 @@ Trước khi nộp, cần có:
 - `tests/` với ít nhất 5 test
 - có negative test cho `tamper` và `wrong key`
 - `logs/` có ít nhất 1 file minh chứng thật
-- không còn dòng `TODO_STUDENT`
+
 
 ## 10. Lưu ý về CI
 
@@ -130,7 +132,7 @@ CI sẽ **không chỉ kiểm tra file có tồn tại** mà còn kiểm tra:
 - các mục bắt buộc trong report
 - sự hiện diện của negative tests
 - có minh chứng trong `logs/`
-- repo **không còn placeholder `TODO_STUDENT`**
+
 
 Vì vậy repo starter này sẽ **chưa pass CI** cho tới khi sinh viên hoàn thiện nội dung.
 
