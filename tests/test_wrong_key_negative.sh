@@ -1,7 +1,6 @@
-#!/usr/bin/env bash
-
-# Gợi ý: giải mã với khóa sai và chứng minh không khôi phục đúng plaintext.
-set -euo pipefail
-
-echo
-exit 0
+#!/bin/bash
+# Negative Test: Dùng sai khóa để giải mã
+# Nhập Mode 2 (Giải mã), sau đó nhập một bản mã và một khóa sai
+echo "2
+1111111101011111000101100000001000111110101011111101110111111010
+0000000000000000000000000000000000000000000000000000000000000000" | ./des

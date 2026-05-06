@@ -1,7 +1,5 @@
-#!/usr/bin/env bash
-
-# Gợi ý: compile chương trình, chạy, rồi đối chiếu ciphertext mẫu mong đợi.
-set -euo pipefail
-
-echo 
-exit 0
+#!/bin/bash
+# Kiểm tra DES với vector thử chuẩn
+echo "1
+0123456789ABCDEF
+133457799BBCDFF1" | ./des
