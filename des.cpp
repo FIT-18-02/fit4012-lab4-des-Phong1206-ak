@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 // --- Helper Functions ---
 string convert_decimal_to_binary(int decimal) {
     return bitset<4>(decimal).to_string();
@@ -172,7 +173,6 @@ string runTripleDES(string input, string k1, string k2, string k3, bool encryptM
 
 int main() {
     int mode;
-    // Bỏ tất cả các dòng cout << "Chọn mode...";
     if (!(cin >> mode)) return 0;
 
     string input, k1, k2, k3;
@@ -181,8 +181,7 @@ int main() {
         if (!(cin >> input >> k1)) return 0;
         DES des; 
         if (mode == 1) {
-            // Chỉ in ra kết quả cuối cùng, không in thêm chữ "Ciphertext: "
-            cout << des.encrypt(input, k1) << endl; 
+            cout << des.encrypt(input, k1) << endl;
         } else {
             cout << des.decrypt(input, k1) << endl;
         }
